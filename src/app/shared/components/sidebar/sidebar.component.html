@@ -1,0 +1,46 @@
+<mat-nav-list>
+    <div class="profile-card">
+        <div class="header">
+            Time left:
+            <h2>{{ now | date:'HH:mm:ss'}}</h2>
+        </div>
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <h2 matSubheader>Apps</h2>
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/">
+        <mat-icon>360</mat-icon> 
+        360 Timeline
+    </a>
+    <mat-divider></mat-divider>
+
+    <h2 matSubheader>Time period</h2>
+
+    <a mat-list-item >
+        Prazgodovina
+    </a>
+    <a mat-list-item >
+        Stari vek
+    </a>
+    <a mat-list-item >
+        Srednji vek
+    </a>
+    <a mat-list-item >
+        Novi vek
+    </a>
+    <a mat-list-item >
+        Novejsa zgodovina
+    </a>
+
+    <mat-divider></mat-divider>
+
+    <h2 matSubheader>Tools</h2>
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/">
+        <mat-icon>history_edu</mat-icon>
+        Import Exam file
+    </a>
+
+</mat-nav-list>
