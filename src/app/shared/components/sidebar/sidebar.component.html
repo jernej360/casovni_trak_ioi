@@ -1,8 +1,8 @@
 <mat-nav-list>
     <div class="profile-card">
-        <div class="header">
+        <div class="header time-box" *ngIf="cas > 0">
             Time left:
-            <h2>{{ now | date:'HH:mm:ss'}}</h2>
+            <h2>{{ cas * 1000 | date:'mm:ss' }}</h2>
         </div>
     </div>
 

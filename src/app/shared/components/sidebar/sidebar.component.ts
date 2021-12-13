@@ -5,16 +5,23 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss']
 })
+
+
 export class SidebarComponent implements OnInit {
 
-  public now: number = 0;
+  //public now: number = 0;
+  public cas: number = 60*45;
+
 
   ngOnInit(): void {
   }
 
   constructor() {
+      // setInterval(() => {
+      //   this.now = Date.now();
+      // }, 1);
       setInterval(() => {
-        this.now = Date.now();
-      }, 1);
+          this.cas = --this.cas;
+      },1000);
   }
 }
