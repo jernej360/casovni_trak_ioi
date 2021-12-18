@@ -12,20 +12,26 @@ import {PanoViewer} from "@egjs/view360"
 
 
 export class MainComponent implements OnInit, AfterViewInit {
- 
-  public container: HTMLElement|null = null;
-  
+
+  private panoViewer:any;
+
   constructor() {
   }
 
-  ngAfterViewInit():void{
-    this.container = document.querySelector('#container');
-    console.log(this.container)
+  chosenTheAngle(){
+    var dir = this.panoViewer.getFov();
+    console.log(dir)
+  }
 
-    if (this.container !=null){
-      const panoViewer = new PanoViewer(this.container);
-      panoViewer.setImage("https://naver.github.io/egjs-view360/examples/img/equi.jpg")
-      console.log(panoViewer)
+  ngAfterViewInit():void{
+    // this.container = document.querySelector('#container');
+    var container = document.getElementById("container");
+    console.log(container)
+
+    if (container !=null){
+      this.panoViewer = new PanoViewer(container);
+      this.panoViewer.setImage("../../../assets/krneki.svg")
+      console.log(this.panoViewer)
     }else{
       console.log("something went wrong!")
     }
