@@ -1,6 +1,7 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
+import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs";
 
-import * as fileQuestion from "../../assets/data.json";
 
 @Injectable({
   providedIn: 'root'
@@ -8,29 +9,36 @@ import * as fileQuestion from "../../assets/data.json";
 
 export class QuestionService {
 
-  public questions:Array<Question>=[];
-  public category:number=0;
+  public questions: Array<Question> = [];
+  public category: number = 0;
 
-  constructor() {
-    this.questions=fileQuestion //schrodingerjev array - je array in ni array
+  constructor(private http: HttpClient) {
+    this.readQuestions()
   }
 
-
-  //tale metoda mi je u sramoto ker sem zelo hitel in mi je tale array nagajal
-  public returnQuestions(_date:string):Question[]|Array<any>{
-    if (this.questions == undefined) {
-      return [];
-    }else{
-      return [];
-    }
+  private getJSON(): Observable<any> {
+    return this.http.get("./assets/data.json");
   }
 
+  public getQuestions(){
+    return this.questions.filter(ques => ques.category==this.category)
+  }
+
+  public readQuestions(){
+    this.getJSON().subscribe((data) => {
+      data.forEach((element:Question) => {
+        this.questions.push(element);
+      })
+      console.log(this.questions)
+    })
+  }
 }
-export class Question{
-  category:number=0
-  question:string=""
-  answer1:string=""
-  answer2:string=""
-  answer3:string=""
-  correct:number=0
+
+export interface Question {
+    category: number
+    question: string
+    answer1: string
+    answer2: string
+    answer3: string
+    correct: number
 }

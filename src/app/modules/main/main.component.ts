@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import * as moment from 'moment';
 import {PanoViewer} from "@egjs/view360"
+import {Question, QuestionService} from "../../services/questions.service";
 
 
 @Component({
@@ -14,8 +15,10 @@ import {PanoViewer} from "@egjs/view360"
 export class MainComponent implements OnInit, AfterViewInit {
 
   private panoViewer:any;
+  public questions: Array<Question> | undefined;
 
-  constructor() {
+  constructor(private questionService: QuestionService) {
+    this.questions=this.questionService.getQuestions()
   }
 
   chosenTheAngle(){
