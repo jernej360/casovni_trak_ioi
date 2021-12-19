@@ -19,8 +19,12 @@ export class MainComponent implements OnInit, AfterViewInit {
   }
 
   chosenTheAngle(){
-    var dir = this.panoViewer.getFov();
-    console.log(dir)
+    let fov = this.panoViewer.getFov();
+    let pitch = this.panoViewer.getPitch();
+    let yaw = this.panoViewer.getYaw();
+    console.log("fov: ",fov);
+    console.log("pitch: ",pitch);
+    console.log("yaw: ",yaw);
   }
 
   ngAfterViewInit():void{

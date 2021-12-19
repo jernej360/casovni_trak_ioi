@@ -1,0 +1,66 @@
+[
+  {
+    "category": 1,
+    "question": "kdaj se je zgodilo",
+    "answer1": "Leta 192",
+    "answer2": "Neki 666",
+    "answer3": "420 blaze",
+    "correct": 1
+  },
+  {
+    "category": 1,
+    "question": "kako se je zgodilo",
+    "answer1": "umrli so",
+    "answer2": "leteli so",
+    "answer3": "blejzali so",
+    "correct": 3
+  },
+  {
+    "category": 2,
+    "question": "nnnnnnnn1",
+    "answer1": "aaaaa1",
+    "answer2": "1aaaaa1",
+    "answer3": "2aaaaa1",
+    "correct": 1
+  },
+  {
+    "category": 2,
+    "question": "nnnnnnnn2",
+    "answer1": "aaaaa2",
+    "answer2": "1aaaaa2",
+    "answer3": "2aaaaa2",
+    "correct": 2
+  },
+  {
+    "category": 2,
+    "question": "nnnnnnnn3",
+    "answer1": "aaaaa3",
+    "answer2": "1aaaaa3",
+    "answer3": "2aaaaa3",
+    "correct": 3
+  },
+  {
+    "category": 3,
+    "question": "n1",
+    "answer1": "a1",
+    "answer2": "a2",
+    "answer3": "a3",
+    "correct": 1
+  },
+  {
+    "category": 4,
+    "question": "n1",
+    "answer1": "a1",
+    "answer2": "a2",
+    "answer3": "a3",
+    "correct": 1
+  },
+  {
+    "category": 5,
+    "question": "n1",
+    "answer1": "a1",
+    "answer2": "a2",
+    "answer3": "a3",
+    "correct": 1
+  }
+]
