@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {QuestionService} from "../../../services/questions.service";
 
 @Component({
   selector: 'app-sidebar',
@@ -16,12 +17,13 @@ export class SidebarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  constructor() {
-      // setInterval(() => {
-      //   this.now = Date.now();
-      // }, 1);
+  constructor(private questionService:QuestionService) {
       setInterval(() => {
           this.cas = --this.cas;
       },1000);
+  }
+
+  public setCategory(cat:number){
+    this.questionService.category;
   }
 }

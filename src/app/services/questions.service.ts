@@ -10,7 +10,11 @@ import {Observable} from "rxjs";
 export class QuestionService {
 
   public questions: Array<Question> = [];
-  public category: number = 0;
+  public category: Observable<number> = new Observable((observer) => {
+    let setCategoryObv = function (cat: number) {
+      observer.next(cat)
+    }
+  })
 
   constructor(private http: HttpClient) {
     this.readQuestions()
@@ -20,9 +24,11 @@ export class QuestionService {
     return this.http.get("./assets/data.json");
   }
 
-  public getQuestions(){
-    return this.questions.filter(ques => ques.category==this.category)
+  public getQuestions(category:number){
+    return this.questions.filter(ques => ques.category==category)
   }
+
+
 
   public readQuestions(){
     this.getJSON().subscribe((data) => {

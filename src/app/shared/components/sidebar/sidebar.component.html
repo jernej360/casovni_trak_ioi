@@ -11,26 +11,26 @@
     <h2 matSubheader>Apps</h2>
 
     <a mat-list-item routerLinkActive="list-item-active" routerLink="/">
-        <mat-icon>360</mat-icon> 
+        <mat-icon>360</mat-icon>
         360 Timeline
     </a>
     <mat-divider></mat-divider>
 
     <h2 matSubheader>Time period</h2>
 
-    <a mat-list-item >
+    <a mat-list-item (click)="setCategory(1)">
         Prazgodovina
     </a>
-    <a mat-list-item >
+    <a mat-list-item (click)="setCategory(2)">
         Stari vek
     </a>
-    <a mat-list-item >
+    <a mat-list-item (click)="setCategory(3)">
         Srednji vek
     </a>
-    <a mat-list-item >
+    <a mat-list-item (click)="setCategory(4)">
         Novi vek
     </a>
-    <a mat-list-item >
+    <a mat-list-item (click)="setCategory(5)">
         Novejsa zgodovina
     </a>
 
