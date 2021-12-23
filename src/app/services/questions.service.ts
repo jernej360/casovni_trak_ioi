@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {BehaviorSubject, Observable} from "rxjs";
 
 
 @Injectable({
@@ -10,11 +10,7 @@ import {Observable} from "rxjs";
 export class QuestionService {
 
   public questions: Array<Question> = [];
-  public category: Observable<number> = new Observable((observer) => {
-    let setCategoryObv = function (cat: number) {
-      observer.next(cat)
-    }
-  })
+  public category: BehaviorSubject<number>=new BehaviorSubject<number>(1)
 
   constructor(private http: HttpClient) {
     this.readQuestions()

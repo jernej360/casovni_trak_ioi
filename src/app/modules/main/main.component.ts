@@ -1,5 +1,4 @@
-import { AfterViewInit, Component, OnInit, ElementRef, ViewChild } from '@angular/core';
-import * as moment from 'moment';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import {PanoViewer} from "@egjs/view360"
 import {Question, QuestionService} from "../../services/questions.service";
 
@@ -18,7 +17,12 @@ export class MainComponent implements OnInit, AfterViewInit {
   public questions: Array<Question> | undefined;
 
   constructor(private questionService: QuestionService) {
-    this.questions=this.questionService.getQuestions()
+    this.questionService.category.subscribe(
+      {next:(cat:number)=>{
+          this.questions=this.questionService.getQuestions(cat)
+          console.log(this.questions)
+      }}
+    )
   }
 
   chosenTheAngle(){
@@ -32,13 +36,10 @@ export class MainComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit():void{
     // this.container = document.querySelector('#container');
-    var container = document.getElementById("container");
-    console.log(container)
-
+    let container = document.getElementById("container");
     if (container !=null){
       this.panoViewer = new PanoViewer(container);
       this.panoViewer.setImage("../../../assets/krneki.svg")
-      console.log(this.panoViewer)
     }else{
       console.log("something went wrong!")
     }

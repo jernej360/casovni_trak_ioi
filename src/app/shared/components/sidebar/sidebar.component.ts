@@ -24,6 +24,6 @@ export class SidebarComponent implements OnInit {
   }
 
   public setCategory(cat:number){
-    this.questionService.category;
+    this.questionService.category.next(cat);
   }
 }
