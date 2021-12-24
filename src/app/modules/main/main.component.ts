@@ -27,7 +27,19 @@ export class MainComponent implements OnInit, AfterViewInit {
     )
   }
 
-  chosenTheAngle() {
+  public answerQuestion(ans:number){
+    if(ans===this.currentQuestion.correct){
+      this.questionService.increaseScore(1)
+      // @ts-ignore
+      this.questionService.questions.find(elem=> elem==this.currentQuestion).answered=true
+      this.getQuestions()
+      console.log("correct!")
+    }else{
+      console.log("wrong answer")
+    }
+  }
+
+  public chosenTheAngle() {
     let fov = this.panoViewer.getFov();
     let pitch = this.panoViewer.getPitch();
     let yaw = this.panoViewer.getYaw();

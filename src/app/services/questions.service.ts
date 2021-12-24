@@ -19,7 +19,8 @@ export class QuestionService {
 
   public increaseScore(sco:number){
     console.log("correct")
-    this.score.next(sco)
+
+    this.score.next(this.score.value+sco)
   }
 
   private getJSON(): Observable<any> {
