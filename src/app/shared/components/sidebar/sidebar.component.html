@@ -42,9 +42,15 @@
 
     <h2 matSubheader>Tools</h2>
 
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/">
-        <mat-icon>history_edu</mat-icon>
-        Import Exam file
-    </a>
+
+  <input #csvInput hidden type="file" onclick="this.value=null" (change)="csvInputChange($event)" accept=".json"/>
+  <button mat-flat-button (click)="csvInput.click()">
+    <mat-icon>history_edu</mat-icon>
+    Import Exam file
+  </button>
+
+
+
+
 
 </mat-nav-list>

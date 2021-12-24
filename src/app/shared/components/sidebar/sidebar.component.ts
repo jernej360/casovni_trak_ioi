@@ -15,6 +15,27 @@ export class SidebarComponent implements OnInit {
   public cas: number = 60 * 45;
   public showTimer: boolean = false;
 
+  csvInputChange(fileInputEvent: any) {
+    let file=fileInputEvent.target.files[0];
+
+    let fileReader = new FileReader();
+    fileReader.onload = (e) => {
+      let n=fileReader.result
+      try{
+        if (typeof n === "string") {
+          var json = JSON.parse(n);
+        }
+        this.questionService.questions=json
+        this.questionService.category.next(0)
+      }catch{
+        console.log("NEKI JE NAROBE Z JSON FILOM")
+      }
+
+
+    }
+    fileReader.readAsText(file);
+  }
+
   public startQuiz() {
     this.questionService.category.next(1);
     this.showTimer = true;
