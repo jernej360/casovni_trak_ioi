@@ -22,7 +22,7 @@ export class MainComponent implements OnInit, AfterViewInit {
         next: (cat: number) => {
           this.questions = this.questionService.getQuestions(cat)
           this.currentQuestion=this.questions[this.questions.length-1]
-          console.log(this.questions)
+          console.log(this.currentQuestion)
         }
       }
     )
@@ -40,6 +40,7 @@ export class MainComponent implements OnInit, AfterViewInit {
   public getQuestions(){
     this.questions = this.questionService.getQuestions(this.questionService.category.value)
     this.currentQuestion=this.questions[this.questions.length-1]
+    console.log(this.currentQuestion)
   }
 
   public resetQuiz() {
@@ -52,8 +53,9 @@ export class MainComponent implements OnInit, AfterViewInit {
     let container = document.getElementById("container");
     if (container != null) {
       this.panoViewer = new PanoViewer(container);
-      this.panoViewer.setImage("../../../assets/krneki.svg")
-    } else {
+      this.panoViewer.setImage("../../../assets/krneki.jpg")
+      this.getQuestions()
+    }else{
       console.log("something went wrong!")
     }
     this.getQuestions()

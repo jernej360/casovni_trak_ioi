@@ -3,7 +3,7 @@ main component
   <button mat-raised-button color="primary" (click)="resetQuiz()">Reset Quiz</button>
   <div id="container"></div>
   <div class="question">
-    <h1>naslov</h1>
+    <h1 *ngIf="currentQuestion">{{currentQuestion.question}}</h1>
     <div>
       <button *ngIf="currentQuestion" mat-button color="primary" (click)="chosenTheAngle()">{{currentQuestion.answer1}}</button>
       <button *ngIf="currentQuestion" mat-button color="primary" (click)="chosenTheAngle()">{{currentQuestion.answer2}}</button>

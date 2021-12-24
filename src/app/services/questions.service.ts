@@ -11,9 +11,15 @@ export class QuestionService {
 
   public questions: Array<Question> = [];
   public category: BehaviorSubject<number> = new BehaviorSubject<number>(1)
+  public score: BehaviorSubject<number> = new BehaviorSubject<number>(0)
 
   constructor(private http: HttpClient) {
     this.readQuestions()
+  }
+
+  public increaseScore(sco:number){
+    console.log("correct")
+    this.score.next(sco)
   }
 
   private getJSON(): Observable<any> {
