@@ -28,6 +28,7 @@ export class SidebarComponent implements OnInit {
     this.showTimer = false;
     this.questionService.tryAgain()
     this.questionService.category.next(0);
+    this.questionService.score.next(0)
   }
 
   ngOnInit(): void {
