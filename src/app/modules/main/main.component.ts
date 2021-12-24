@@ -14,27 +14,29 @@ export class MainComponent implements OnInit, AfterViewInit {
 
   private panoViewer: any;
   public questions: Array<Question> = [];
-  public currentQuestion=new Question();
+  public currentQuestion = new Question();
 
   constructor(private questionService: QuestionService) {
     this.questionService.category.subscribe(
       {
         next: (cat: number) => {
           this.questions = this.questionService.getQuestions(cat)
-          this.currentQuestion=this.questions[this.questions.length-1]
+          this.currentQuestion = this.questions[this.questions.length - 1]
+          this.setPanorama()
         }
       }
     )
   }
 
-  public answerQuestion(ans:number){
-    if(ans===this.currentQuestion.correct){
+  public answerQuestion(ans: number) {
+    if (ans === this.currentQuestion.correct) {
       this.questionService.increaseScore(1)
       // @ts-ignore
-      this.questionService.questions.find(elem=> elem==this.currentQuestion).answered=true
+      this.questionService.questions.find(elem => elem == this.currentQuestion).answered = true
       this.getQuestions()
+      this.setPanorama()
       console.log("correct!")
-    }else{
+    } else {
       console.log("wrong answer")
     }
   }
@@ -48,9 +50,29 @@ export class MainComponent implements OnInit, AfterViewInit {
     console.log("yaw: ", yaw);
   }
 
-  public getQuestions(){
+  public setPanorama() {
+    let container = document.getElementById("container");
+    if (container != null) {
+      this.panoViewer = new PanoViewer(container);
+      if (this.currentQuestion) {
+        this.panoViewer.setImage(this.currentQuestion.image)
+        console.log("its started")
+      } else if (this.currentQuestion === undefined && this.questionService.score.value == 0) {
+        this.panoViewer.setImage("../../../assets/equi.jpg")
+        console.log("its 0")
+      } else
+      {
+        this.panoViewer.setImage("../../../assets/Untitled.png")
+        console.log("its undefined")
+      }
+    } else {
+      console.log("something went wrong!")
+    }
+  }
+
+  public getQuestions() {
     this.questions = this.questionService.getQuestions(this.questionService.category.value)
-    this.currentQuestion=this.questions[this.questions.length-1]
+    this.currentQuestion = this.questions[this.questions.length - 1]
     console.log(this.currentQuestion)
   }
 
@@ -59,16 +81,10 @@ export class MainComponent implements OnInit, AfterViewInit {
     this.getQuestions()
   }
 
+
   ngAfterViewInit(): void {
     // this.container = document.querySelector('#container');
-    let container = document.getElementById("container");
-    if (container != null) {
-      this.panoViewer = new PanoViewer(container);
-      this.panoViewer.setImage("../../../assets/krneki.jpg")
-    }else{
-      console.log("something went wrong!")
-    }
-    this.getQuestions()
+    this.setPanorama()
   }
 
   ngOnInit(): void {

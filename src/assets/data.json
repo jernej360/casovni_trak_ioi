@@ -5,7 +5,8 @@
     "answer1": "Leta 192",
     "answer2": "Neki 666",
     "answer3": "420 blaze",
-    "correct": 1
+    "correct": 1,
+    "image": "../../../assets/krneki.jpg"
   },
   {
     "category": 1,
@@ -13,7 +14,8 @@
     "answer1": "umrli so",
     "answer2": "leteli so",
     "answer3": "blejzali so",
-    "correct": 3
+    "correct": 3,
+    "image": "../../../assets/krneki.jpg"
   },
   {
     "category": 2,
@@ -21,7 +23,8 @@
     "answer1": "aaaaa1",
     "answer2": "1aaaaa1",
     "answer3": "2aaaaa1",
-    "correct": 1
+    "correct": 1,
+    "image": "../../../assets/krneki.jpg"
   },
   {
     "category": 2,
@@ -29,7 +32,8 @@
     "answer1": "aaaaa2",
     "answer2": "1aaaaa2",
     "answer3": "2aaaaa2",
-    "correct": 2
+    "correct": 2,
+    "image": "../../../assets/krneki.jpg"
   },
   {
     "category": 2,
@@ -37,7 +41,8 @@
     "answer1": "aaaaa3",
     "answer2": "1aaaaa3",
     "answer3": "2aaaaa3",
-    "correct": 3
+    "correct": 3,
+    "image": "../../../assets/krneki.jpg"
   },
   {
     "category": 3,
@@ -45,7 +50,8 @@
     "answer1": "a1",
     "answer2": "a2",
     "answer3": "a3",
-    "correct": 1
+    "correct": 1,
+    "image": "../../../assets/krneki.jpg"
   },
   {
     "category": 4,
@@ -53,7 +59,8 @@
     "answer1": "a1",
     "answer2": "a2",
     "answer3": "a3",
-    "correct": 1
+    "correct": 1,
+    "image": "https://upload.wikimedia.org/wikipedia/en/9/95/Test_image.jpg"
   },
   {
     "category": 5,
@@ -61,6 +68,7 @@
     "answer1": "a1",
     "answer2": "a2",
     "answer3": "a3",
-    "correct": 1
+    "correct": 1,
+    "image": "https://upload.wikimedia.org/wikipedia/en/9/95/Test_image.jpg"
   }
 ]

@@ -9,6 +9,7 @@ import {QuestionService} from "../../../services/questions.service";
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
+  public ans:number|undefined=this.questionService.questions.filter(ques => !ques.answered).length;
 
   constructor(public questionService:QuestionService) { }
 

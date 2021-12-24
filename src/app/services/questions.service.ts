@@ -60,6 +60,7 @@ export class Question {
   answer2: string = ""
   answer3: string = ""
   correct: number = 0
+  image:string="";
 
   constructor() {
     this.answered=false;

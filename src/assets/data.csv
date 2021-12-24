@@ -1,9 +1,9 @@
-"category","question","answer1","answer2","answer3","correct"
-1,"kdaj se je zgodilo","Leta 192","Neki 666","420 blaze",1
-1,"kako se je zgodilo","umrli so","leteli so","blejzali so",3
-2,"nnnnnnnn1","aaaaa1","1aaaaa1","2aaaaa1",1
-2,"nnnnnnnn2","aaaaa2","1aaaaa2","2aaaaa2",2
-2,"nnnnnnnn3","aaaaa3","1aaaaa3","2aaaaa3",3
-3,"n1","a1","a2","a3",1
-4,"n1","a1","a2","a3",1
-5,"n1","a1","a2","a3",1
+category,question,answer1,answer2,answer3,correct,image
+1,kdaj se je zgodilo,Leta 192,Neki 666,420 blaze,1,../../../assets/krneki.jpg
+1,kako se je zgodilo,umrli so,leteli so,blejzali so,3,../../../assets/krneki.jpg
+2,nnnnnnnn1,aaaaa1,1aaaaa1,2aaaaa1,1,../../../assets/krneki.jpg
+2,nnnnnnnn2,aaaaa2,1aaaaa2,2aaaaa2,2,../../../assets/krneki.jpg
+2,nnnnnnnn3,aaaaa3,1aaaaa3,2aaaaa3,3,../../../assets/krneki.jpg
+3,n1,a1,a2,a3,1,../../../assets/krneki.jpg
+4,n1,a1,a2,a3,1,https://upload.wikimedia.org/wikipedia/en/9/95/Test_image.jpg
+5,n1,a1,a2,a3,1,https://upload.wikimedia.org/wikipedia/en/9/95/Test_image.jpg
