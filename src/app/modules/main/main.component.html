@@ -1,9 +1,13 @@
 main component
 <div>
+  <button mat-raised-button color="primary" (click)="resetQuiz()">Reset Quiz</button>
   <div id="container"></div>
   <div class="question">
-    <h1>Question:</h1>
-    <h2>When was primoz trubar born?</h2>
-    <button mat-raised-button color="primary" (click)="chosenTheAngle()">Answer</button>
+    <h1>naslov</h1>
+    <div>
+      <button *ngIf="currentQuestion" mat-button color="primary" (click)="chosenTheAngle()">{{currentQuestion.answer1}}</button>
+      <button *ngIf="currentQuestion" mat-button color="primary" (click)="chosenTheAngle()">{{currentQuestion.answer2}}</button>
+      <button *ngIf="currentQuestion" mat-button color="primary" (click)="chosenTheAngle()">{{currentQuestion.answer3}}</button>
+    </div>
   </div>
 </div>

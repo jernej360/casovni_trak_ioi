@@ -8,16 +8,18 @@ import { DefaultModule } from './layouts/default/default.module';
 import {QuestionService} from "./services/questions.service";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    DefaultModule
-  ],
-  providers: [QuestionService],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        DefaultModule
+    ],
+    providers: [QuestionService],
+    exports: [
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

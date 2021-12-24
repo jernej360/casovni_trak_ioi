@@ -13,12 +13,13 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import {MatButtonModule} from "@angular/material/button";
 import {HttpClientModule} from "@angular/common/http";
-
+import {QuestionViewComponent} from "../../modules/main/question-view/question-view.component";
 
 @NgModule({
   declarations: [
     DefaultComponent,
     MainComponent,
+    QuestionViewComponent
   ],
     imports: [
         CommonModule,
@@ -32,7 +33,7 @@ import {HttpClientModule} from "@angular/common/http";
         MatSelectModule,
         FormsModule,
         MatButtonModule,
-        HttpClientModule
+        HttpClientModule,
     ],
   exports: [
 

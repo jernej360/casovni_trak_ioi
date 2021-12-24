@@ -10,7 +10,7 @@ import {BehaviorSubject, Observable} from "rxjs";
 export class QuestionService {
 
   public questions: Array<Question> = [];
-  public category: BehaviorSubject<number>=new BehaviorSubject<number>(1)
+  public category: BehaviorSubject<number> = new BehaviorSubject<number>(1)
 
   constructor(private http: HttpClient) {
     this.readQuestions()
@@ -20,27 +20,41 @@ export class QuestionService {
     return this.http.get("./assets/data.json");
   }
 
-  public getQuestions(category:number){
-    return this.questions.filter(ques => ques.category==category)
+  public getQuestions(category: number) {
+    return this.questions.filter(ques => ques.category == category && !ques.answered)
   }
 
+  public tryAgain(){
+    this.questions.forEach(ques=>{
+      ques.answered=false;
+    })
+  }
 
+  public printAll(){
+    console.log(this.questions)
+  }
 
-  public readQuestions(){
+  public readQuestions() {
     this.getJSON().subscribe((data) => {
-      data.forEach((element:Question) => {
+      data.forEach((element: Question) => {
         this.questions.push(element);
       })
-      console.log(this.questions)
+      this.tryAgain()
+      this.printAll()
     })
   }
 }
 
-export interface Question {
-    category: number
-    question: string
-    answer1: string
-    answer2: string
-    answer3: string
-    correct: number
+export class Question {
+  answered: boolean = false;
+  category: number = 0
+  question: string = ""
+  answer1: string = ""
+  answer2: string = ""
+  answer3: string = ""
+  correct: number = 0
+
+  constructor() {
+    this.answered=false;
+  }
 }
