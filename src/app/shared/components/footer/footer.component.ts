@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as moment from 'moment';
+import {QuestionService} from "../../../services/questions.service";
 
 
 @Component({
@@ -9,9 +10,7 @@ import * as moment from 'moment';
 })
 export class FooterComponent implements OnInit {
 
-  public today=moment().format('LL');
-  
-  constructor() { }
+  constructor(public questionService:QuestionService) { }
 
   ngOnInit(): void {
   }

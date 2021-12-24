@@ -1,18 +1,22 @@
 <mat-nav-list>
     <div class="profile-card">
-        <div class="header time-box" *ngIf="cas > 0">
-            Time left:
-            <h2>{{ cas * 1000 | date:'mm:ss' }}</h2>
-        </div>
+      <button class="start-button" *ngIf="!showTimer" mat-raised-button mat-button (click)="startQuiz()">
+        <mat-icon>play_arrow</mat-icon>
+        START
+      </button>
+      <div class="header time-box" *ngIf="cas > 0 && showTimer" >
+          Time left:
+          <h2>{{ cas * 1000 | date:'mm:ss' }}</h2>
+      </div>
     </div>
 
     <mat-divider></mat-divider>
 
-    <h2 matSubheader>Apps</h2>
+    <h2 *ngIf="showTimer" matSubheader>Menu</h2>
 
-    <a mat-list-item routerLinkActive="list-item-active" routerLink="/">
+    <a *ngIf="showTimer" mat-list-item (click)="resetQuiz()">
         <mat-icon>360</mat-icon>
-        360 Timeline
+        Reset Quiz
     </a>
     <mat-divider></mat-divider>
 

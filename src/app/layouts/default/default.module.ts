@@ -13,6 +13,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import {MatButtonModule} from "@angular/material/button";
 import {HttpClientModule} from "@angular/common/http";
+import { MatSnackBarModule} from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import {HttpClientModule} from "@angular/common/http";
         FormsModule,
         MatButtonModule,
         HttpClientModule,
+        MatSnackBarModule
     ],
   exports: [
 
