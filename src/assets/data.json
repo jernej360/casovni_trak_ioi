@@ -1,74 +1,84 @@
 [
   {
-    "category": 1,
-    "question": "kdaj se je zgodilo",
-    "answer1": "Leta 192",
-    "answer2": "Neki 666",
-    "answer3": "420 blaze",
-    "correct": 1,
-    "image": "../../../assets/krneki.jpg"
-  },
-  {
-    "category": 1,
-    "question": "kako se je zgodilo",
-    "answer1": "umrli so",
-    "answer2": "leteli so",
-    "answer3": "blejzali so",
-    "correct": 3,
-    "image": "../../../assets/krneki.jpg"
-  },
-  {
-    "category": 2,
-    "question": "nnnnnnnn1",
-    "answer1": "aaaaa1",
-    "answer2": "1aaaaa1",
-    "answer3": "2aaaaa1",
-    "correct": 1,
-    "image": "../../../assets/krneki.jpg"
-  },
-  {
-    "category": 2,
-    "question": "nnnnnnnn2",
-    "answer1": "aaaaa2",
-    "answer2": "1aaaaa2",
-    "answer3": "2aaaaa2",
+    "category": 5,
+    "question": "Katero vojno predstavljajo prikazane slike?",
+    "answer1": "1. svetovno vojno",
+    "answer2": "2. svetovno vojno",
+    "answer3": "korejsko vojno",
     "correct": 2,
-    "image": "../../../assets/krneki.jpg"
-  },
-  {
-    "category": 2,
-    "question": "nnnnnnnn3",
-    "answer1": "aaaaa3",
-    "answer2": "1aaaaa3",
-    "answer3": "2aaaaa3",
-    "correct": 3,
-    "image": "../../../assets/krneki.jpg"
-  },
-  {
-    "category": 3,
-    "question": "n1",
-    "answer1": "a1",
-    "answer2": "a2",
-    "answer3": "a3",
-    "correct": 1,
-    "image": "../../../assets/krneki.jpg"
+    "image": "../../../assets/ww2.svg"
   },
   {
     "category": 4,
-    "question": "n1",
-    "answer1": "a1",
-    "answer2": "a2",
-    "answer3": "a3",
+    "question": "V katerem desetleju 19. stoletja se je začela 1. svetovna vojna?",
+    "answer1": "prvo desetletje (1910-1919)",
+    "answer2": "drugo desetletje (1920-1929)",
+    "answer3": "tretje desetletje (1930-1939)",
     "correct": 1,
-    "image": "https://upload.wikimedia.org/wikipedia/en/9/95/Test_image.jpg"
+    "image": "../../../assets/ww1.svg"
   },
   {
     "category": 5,
-    "question": "n1",
-    "answer1": "a1",
-    "answer2": "a2",
-    "answer3": "a3",
+    "question": "Približno koliko let je trajala hladna vojna?",
+    "answer1": "42 let",
+    "answer2": "47 let",
+    "answer3": "45 let",
+    "correct": 3,
+    "image": "../../../assets/coldwar.svg"
+  },
+  {
+    "category": 5,
+    "question": "Na kateri datum se je zgodil prikazani teroristični napad v ZDA?",
+    "answer1": "12.9.2002",
+    "answer2": "11.9.2001",
+    "answer3": "13.9.2000",
+    "correct": 2,
+    "image": "../../../assets/september11.svg"
+  },
+  {
+    "category": 5,
+    "question": "Na kateri dan je človek prvič pristal na Luni?",
+    "answer1": "16. julij 1969",
+    "answer2": "18. junij 1969 ",
+    "answer3": "20. julij 1969 ",
+    "correct": 3,
+    "image": "../../../assets/appolo11.svg"
+  },
+  {
+    "category": 5,
+    "question": "Kateri pomemben zgodovinski mejnik Nemčije je predstavljen na slikah?",
+    "answer1": "Konec 2. svetovne vojne",
+    "answer2": "Padec berlinskega zidu",
+    "answer3": "Padec Hitlerjeve diktature",
+    "correct": 2,
+    "image": "../../../assets/berlinski_zid.svg"
+  },
+  {
+    "category": 5,
+    "question": "V kateri državi se je zgodil prikazan dogodek?",
+    "answer1": "Rusija",
+    "answer2": "Ukrajina",
+    "answer3": "Belorusija",
+    "correct": 2,
+    "image": "../../../assets/chernobyl.svg"
+  },
+  {
+    "category": 5,
+    "question": "Konflik med katerima državama je povzročil dogodke na slikah ?",
+    "answer1": "ZDA - Rusija",
+    "answer2": "ZDA - Kuba",
+    "answer3": "Rusija - Kuba",
     "correct": 1,
-    "image": "https://upload.wikimedia.org/wikipedia/en/9/95/Test_image.jpg"
+    "image": "../../../assets/cuban_missile_crisis.svg"
+  }
+  ,
+  {
+    "category": 5,
+    "question": "Kaj je predstavljeno na slikah ?",
+    "answer1": "Satelit z Voyager plovila",
+    "answer2": "Plošča z podatki o Zemlji",
+    "answer3": "Gramofonska plošča",
+    "correct": 2,
+    "image": "../../../assets/voyager.svg"
   }
 ]
