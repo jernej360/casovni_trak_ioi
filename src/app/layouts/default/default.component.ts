@@ -37,7 +37,10 @@ export class DefaultComponent implements OnInit {
             ? `'${item.mqAlias}' = (${item.mediaQuery})`
             : '';
           if (item.mqAlias === 'md') {
-            this.loadMobileContent();
+            this.mode="over"
+          }
+          if (item.mqAlias === 'lg') {
+            this.mode="side"
           }
           console.log('activeMediaQuery', this.activeMediaQuery);
         });
@@ -48,9 +51,6 @@ export class DefaultComponent implements OnInit {
     this.mediaSubscription.unsubscribe();
   }
 
-  loadMobileContent() {
-    this.mode="over"
-  }
 
   sideBarOpen = true;
 

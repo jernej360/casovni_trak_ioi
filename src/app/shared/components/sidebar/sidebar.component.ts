@@ -18,18 +18,18 @@ export class SidebarComponent implements OnInit {
   public showTimer: boolean = false;
 
   csvInputChange(fileInputEvent: any) {
-    let file=fileInputEvent.target.files[0];
+    let file = fileInputEvent.target.files[0];
 
     let fileReader = new FileReader();
     fileReader.onload = (e) => {
-      let n=fileReader.result
-      try{
+      let n = fileReader.result
+      try {
         if (typeof n === "string") {
           var json = JSON.parse(n);
         }
-        this.questionService.questions=json
+        this.questionService.questions = json
         this.questionService.category.next(0)
-      }catch{
+      } catch {
         console.log("NEKI JE NAROBE Z JSON FILOM")
       }
 
@@ -44,6 +44,9 @@ export class SidebarComponent implements OnInit {
     this.cas = 60 * 45;
     setInterval(() => {
       this.cas = --this.cas;
+      if (this.cas == 0) {
+        this.resetQuiz()
+      }
     }, 1000);
   }
 
@@ -62,12 +65,12 @@ export class SidebarComponent implements OnInit {
 
   public setCategory(cat: number) {
     this.toggleSidebar.emit(true)
-    if(this.showTimer){
+    if (this.showTimer) {
       setTimeout(() => {
         this.questionService.category.next(cat);
       }, 500);
-    }else{
-      this.snackBar.open('You need to start the Quiz first!', 'Start',{duration: 2000}).onAction().subscribe(()=>this.startQuiz())
+    } else {
+      this.snackBar.open('You need to start the Quiz first!', 'Start', {duration: 2000}).onAction().subscribe(() => this.startQuiz())
     }
   }
 }

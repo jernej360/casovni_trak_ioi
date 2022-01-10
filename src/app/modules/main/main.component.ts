@@ -60,11 +60,13 @@ export class MainComponent implements OnInit, AfterViewInit {
     let container = document.getElementById("container");
     if (container != null) {
       this.panoViewer = new PanoViewer(container);
+      this.panoViewer.enableSensor()
+      this.panoViewer.setGyroMode("yawPitch");
       if (this.currentQuestion) {
         this.panoViewer.setImage(this.currentQuestion.image)
         console.log("its started")
       } else if (this.currentQuestion === undefined && this.questionService.score.value == 0) {
-        this.panoViewer.setImage("../../../assets/equi.jpg")
+        this.panoViewer.setImage("../../../assets/zacetek.png")
         console.log("its 0")
       } else
       {
