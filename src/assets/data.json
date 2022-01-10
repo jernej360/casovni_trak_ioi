@@ -89,5 +89,32 @@
     "answer3": "Louisiana",
     "correct": 3,
     "image": "../../../assets/katrina.png"
+  },
+  {
+    "category": 1,
+    "question": "Kaj je najpomembnejše odkritje v prikazanem obdobju?",
+    "answer1": "Orodje",
+    "answer2": "Glasba",
+    "answer3": "Ogenj",
+    "correct": 3,
+    "image": "../../../assets/ogenj.png"
+  },
+    {
+    "category": 2,
+    "question": "Kdo je bil zadnji pravi faraon?",
+    "answer1": "Cleopatra VII",
+    "answer2": "Tutankamon",
+    "answer3": "Cleopatra III",
+    "correct": 1,
+    "image": "../../../assets/egipt.png"
+  },
+  {
+    "category": 3,
+    "question": "Od kdaj do kdaj je tralaj srednji vek?",
+    "answer1": "od 6. stoletja do prve polovice 15. stoletja",
+    "answer2": "od 6. stoletja do druge polovice 15. stoletja",
+    "answer3": "od 5. stoletja do 13. stoletja",
+    "correct": 2,
+    "image": "../../../assets/stari.png"
   }
 ]
