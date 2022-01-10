@@ -28,7 +28,12 @@ export class QuestionService {
   }
 
   public getQuestions(category: number) {
-    return this.questions.filter(ques => ques.category == category && !ques.answered)
+    if(category==-1){
+      return this.questions.filter(ques => !ques.answered)
+    }else{
+      return this.questions.filter(ques => ques.category == category && !ques.answered)
+    }
+
   }
 
   public tryAgain(){

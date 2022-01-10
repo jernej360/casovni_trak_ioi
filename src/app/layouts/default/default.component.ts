@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MediaChange, MediaObserver } from "@angular/flex-layout";
+import {Subscription} from "rxjs";
+import { distinctUntilChanged } from 'rxjs/operators';
+import {MatDrawerMode} from "@angular/material/sidenav";
 
 @Component({
   selector: 'app-default',
@@ -7,13 +11,49 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DefaultComponent implements OnInit {
 
-  constructor() { }
+  mode: MatDrawerMode = 'side';
+
+  private mediaSubscription!: Subscription;
+  private activeMediaQuery: string = '';
+
+  constructor(private mediaObserver: MediaObserver) {}
+
 
   ngOnInit(): void {
+    const getAlias = (MediaChange: MediaChange[]) => {
+      return MediaChange[0].mqAlias;
+    };
+
+    this.mediaSubscription = this.mediaObserver
+      .asObservable()
+      .pipe(
+        distinctUntilChanged(
+          (x: MediaChange[], y: MediaChange[]) => getAlias(x) === getAlias(y)
+        )
+      )
+      .subscribe((change) => {
+        change.forEach((item) => {
+          this.activeMediaQuery = item
+            ? `'${item.mqAlias}' = (${item.mediaQuery})`
+            : '';
+          if (item.mqAlias === 'md') {
+            this.loadMobileContent();
+          }
+          console.log('activeMediaQuery', this.activeMediaQuery);
+        });
+      });
+  }
+
+  ngOnDestroy(): void {
+    this.mediaSubscription.unsubscribe();
+  }
+
+  loadMobileContent() {
+    this.mode="over"
   }
 
   sideBarOpen = true;
-  
+
   sideBarToggler() {
     this.sideBarOpen = !this.sideBarOpen;
   }

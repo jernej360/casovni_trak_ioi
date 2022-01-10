@@ -1,11 +1,11 @@
 <div>
   <div id="container"></div>
-  <div class="question">
+  <div [style.color]="colorAnswers" class="question">
     <h1 *ngIf="currentQuestion">{{currentQuestion.question}}</h1>
     <div>
-      <button *ngIf="currentQuestion" mat-button color="primary" (click)="answerQuestion(1)">{{currentQuestion.answer1}}</button>
-      <button *ngIf="currentQuestion" mat-button color="primary" (click)="answerQuestion(2)">{{currentQuestion.answer2}}</button>
-      <button *ngIf="currentQuestion" mat-button color="primary" (click)="answerQuestion(3)">{{currentQuestion.answer3}}</button>
+      <button [style.color]="colorAnswers" *ngIf="currentQuestion" mat-button color="primary" (click)="answerQuestion(1)">{{currentQuestion.answer1}}</button>
+      <button [style.color]="colorAnswers" *ngIf="currentQuestion" mat-button color="primary" (click)="answerQuestion(2)">{{currentQuestion.answer2}}</button>
+      <button [style.color]="colorAnswers" *ngIf="currentQuestion" mat-button color="primary" (click)="answerQuestion(3)">{{currentQuestion.answer3}}</button>
     </div>
   </div>
 </div>

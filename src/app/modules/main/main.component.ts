@@ -15,6 +15,7 @@ export class MainComponent implements OnInit, AfterViewInit {
   private panoViewer: any;
   public questions: Array<Question> = [];
   public currentQuestion = new Question();
+  public colorAnswers:string='';
 
   constructor(private questionService: QuestionService) {
     this.questionService.category.subscribe(
@@ -38,6 +39,11 @@ export class MainComponent implements OnInit, AfterViewInit {
       console.log("correct!")
     } else {
       console.log("wrong answer")
+      this.colorAnswers='#eb4034';
+      setTimeout(() => {
+        this.colorAnswers = '';
+      }, 500);
+
     }
   }
 
@@ -63,6 +69,13 @@ export class MainComponent implements OnInit, AfterViewInit {
       } else
       {
         this.panoViewer.setImage("../../../assets/Untitled.png")
+        this.currentQuestion=new Question()
+        let left=this.questionService.getQuestions(-1).length
+        if(left>0){
+          this.currentQuestion.question="Your score in this category is: "+this.questionService.score.value+"\nYou still have "+left+" questions left to finish the quiz!"
+        }else{
+          this.currentQuestion.question="Congrats on finishing the quiz your score is: "+this.questionService.score.value
+        }
         console.log("its undefined")
       }
     } else {

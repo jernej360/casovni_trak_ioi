@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {QuestionService} from "../../../services/questions.service";
 import {MatSnackBar, MatSnackBarRef} from "@angular/material/snack-bar";
 
@@ -10,6 +10,8 @@ import {MatSnackBar, MatSnackBarRef} from "@angular/material/snack-bar";
 
 
 export class SidebarComponent implements OnInit {
+
+  @Output() toggleSidebar = new EventEmitter<boolean>();
 
   //public now: number = 0;
   public cas: number = 60 * 45;
@@ -59,10 +61,13 @@ export class SidebarComponent implements OnInit {
   }
 
   public setCategory(cat: number) {
+    this.toggleSidebar.emit(true)
     if(this.showTimer){
-      this.questionService.category.next(cat);
+      setTimeout(() => {
+        this.questionService.category.next(cat);
+      }, 500);
     }else{
-      this.snackBar.open('You need to start the Quiz first!', 'Start').onAction().subscribe(()=>this.startQuiz())
+      this.snackBar.open('You need to start the Quiz first!', 'Start',{duration: 2000}).onAction().subscribe(()=>this.startQuiz())
     }
   }
 }
