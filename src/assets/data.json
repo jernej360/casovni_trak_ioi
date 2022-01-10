@@ -6,7 +6,7 @@
     "answer2": "2. svetovno vojno",
     "answer3": "korejsko vojno",
     "correct": 2,
-    "image": "../../../assets/ww2.svg"
+    "image": "../../../assets/ww2.png"
   },
   {
     "category": 4,
@@ -15,7 +15,7 @@
     "answer2": "drugo desetletje (1920-1929)",
     "answer3": "tretje desetletje (1930-1939)",
     "correct": 1,
-    "image": "../../../assets/ww1.svg"
+    "image": "../../../assets/ww1.png"
   },
   {
     "category": 5,
@@ -24,7 +24,7 @@
     "answer2": "47 let",
     "answer3": "45 let",
     "correct": 3,
-    "image": "../../../assets/coldwar.svg"
+    "image": "../../../assets/coldwar.png"
   },
   {
     "category": 5,
@@ -33,7 +33,7 @@
     "answer2": "11.9.2001",
     "answer3": "13.9.2000",
     "correct": 2,
-    "image": "../../../assets/september11.svg"
+    "image": "../../../assets/september11.png"
   },
   {
     "category": 5,
@@ -42,7 +42,7 @@
     "answer2": "18. junij 1969 ",
     "answer3": "20. julij 1969 ",
     "correct": 3,
-    "image": "../../../assets/appolo11.svg"
+    "image": "../../../assets/appolo11.png"
   },
   {
     "category": 5,
@@ -51,7 +51,7 @@
     "answer2": "Padec berlinskega zidu",
     "answer3": "Padec Hitlerjeve diktature",
     "correct": 2,
-    "image": "../../../assets/berlinski_zid.svg"
+    "image": "../../../assets/berlinski_zid.png"
   },
   {
     "category": 5,
@@ -60,7 +60,7 @@
     "answer2": "Ukrajina",
     "answer3": "Belorusija",
     "correct": 2,
-    "image": "../../../assets/chernobyl.svg"
+    "image": "../../../assets/chernobyl.png"
   },
   {
     "category": 5,
@@ -69,7 +69,7 @@
     "answer2": "ZDA - Kuba",
     "answer3": "Rusija - Kuba",
     "correct": 1,
-    "image": "../../../assets/cuban_missile_crisis.svg"
+    "image": "../../../assets/cuban_missile_crisis.png"
   }
   ,
   {
@@ -79,6 +79,15 @@
     "answer2": "Plošča z podatki o Zemlji",
     "answer3": "Gramofonska plošča",
     "correct": 2,
-    "image": "../../../assets/voyager.svg"
+    "image": "../../../assets/voyager.png"
+  },
+  {
+    "category": 5,
+    "question": "Kje je največje upostošenje za sabo pustil hurikan Katrina?",
+    "answer1": "Washington",
+    "answer2": "Texas",
+    "answer3": "Louisiana",
+    "correct": 3,
+    "image": "../../../assets/katrina.png"
   }
 ]
