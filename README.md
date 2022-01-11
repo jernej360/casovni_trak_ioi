@@ -10,6 +10,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 You can also start the application by running npm start in the src folder.
 
+If you wish to test on mobile, run ng serve --host 0.0.0.0 --ssl - then head to localhost:4200 on your mobile device.
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
