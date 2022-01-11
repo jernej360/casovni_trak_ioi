@@ -4,6 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 To install everything that is required run npm install in the src server.
 
+You will need a Node.Js version of at least 12.20.0.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -11,6 +13,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 You can also start the application by running npm start in the src folder.
 
 If you wish to test on mobile, run ng serve --host 0.0.0.0 --ssl - then head to localhost:4200 on your mobile device.
+
+If this won't work, try to install Angular/Cli with npm install -g @angular/cli or contact Jernej.
 
 ## Code scaffolding
 
